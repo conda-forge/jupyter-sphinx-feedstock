@@ -13,12 +13,12 @@ source:
 build:
   number: 1
   noarch: python
+  skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
   run:
     - ipython
     - ipywidgets >=7.0.0
