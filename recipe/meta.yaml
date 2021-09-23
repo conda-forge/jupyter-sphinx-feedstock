@@ -19,6 +19,7 @@ build:
 requirements:
   host:
     - pip
+    - python
   run:
     - ipython
     - ipywidgets >=7.0.0
