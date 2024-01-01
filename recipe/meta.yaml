@@ -13,10 +13,10 @@ source:
 build:
   number: 2
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 outputs:
   - name: jupyter-sphinx
-    script: python -m pip install . -vv
     requirements:
       host:
         - pip
@@ -35,7 +35,6 @@ outputs:
 
   # alias to deprecate the jupyter_sphinx feedstock
   - name: jupyter_sphinx
-    script: python -m pip install . -vv
     requirements:
       host:
         - pip
