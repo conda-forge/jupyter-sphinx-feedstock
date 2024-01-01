@@ -38,9 +38,9 @@ outputs:
       noarch: generic
       run: 
         - {{ pin_subpackage('jupyter-sphinx', max_pin="x.x.x") }}
-  test:
-    imports:
-      - jupyter_sphinx
+    test:
+      imports:
+        - jupyter_sphinx
 
 about:
   home: https://github.com/jupyter/jupyter-sphinx/
