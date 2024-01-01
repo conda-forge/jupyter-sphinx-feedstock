@@ -16,7 +16,7 @@ build:
 
 outputs:
   - name: jupyter-sphinx
-    script: {{ PYTHON }} -m pip install . -vv
+    script: python -m pip install . -vv
     requirements:
       host:
         - pip
@@ -33,11 +33,21 @@ outputs:
       imports:
         - jupyter_sphinx
 
+  # alias to deprecate the jupyter_sphinx feedstock
   - name: jupyter_sphinx
-    build: 
-      noarch: generic
-      run: 
-        - {{ pin_subpackage('jupyter-sphinx', max_pin="x.x.x") }}
+    script: python -m pip install . -vv
+    requirements:
+      host:
+        - pip
+        - python >=3.6
+        - hatchling
+      run:
+        - python >=3.6
+        - ipython
+        - ipywidgets >=7.0.0
+        - nbconvert >=5.5
+        - nbformat
+        - sphinx >=2
     test:
       imports:
         - jupyter_sphinx
