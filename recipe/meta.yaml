@@ -13,25 +13,34 @@ source:
 build:
   number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
 
-requirements:
-  host:
-    - pip
-    - python >=3.6
-    - hatchling
-  run:
-    - python >=3.6
-    - ipython
-    - ipywidgets >=7.0.0
-    - nbconvert >=5.5
-    - nbformat
-    - sphinx >=2
+outputs:
+  - name: jupyter-sphinx
+    script: {{ PYTHON }} -m pip install . -vv
+    requirements:
+      host:
+        - pip
+        - python >=3.6
+        - hatchling
+      run:
+        - python >=3.6
+        - ipython
+        - ipywidgets >=7.0.0
+        - nbconvert >=5.5
+        - nbformat
+        - sphinx >=2
+    test:
+      imports:
+        - jupyter_sphinx
 
-test:
-  imports:
-    - jupyter_sphinx
-
+  - name: jupyter_sphinx
+    build: 
+      noarch: generic
+      run: 
+        - {{ pin_subpackage('jupyter-sphinx', max_pin="x.x.x") }}
+      test:
+        imports:
+          - jupyter_sphinx
 about:
   home: https://github.com/jupyter/jupyter-sphinx/
   license: BSD-3-Clause
