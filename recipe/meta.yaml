@@ -39,7 +39,7 @@ outputs:
   - name: jupyter_sphinx
     requirements:
       run:
-        - {{ pin_subpackage('jupyter-sphinx', max_pin="x.x.x") }}
+        - {{ pin_subpackage(name, exact=True) }}
     test:
       imports:
         - jupyter_sphinx
