@@ -36,22 +36,12 @@ outputs:
 
   # alias to deprecate the jupyter_sphinx feedstock
   - name: jupyter_sphinx
-    requirements:
-      host:
-        - pip
-        - python >=3.8
-        - hatchling
-      run:
-        - python >=3.8
-        - ipykernel >=4.5.1
-        - ipython
-        - ipywidgets >=7.0.0
-        - nbconvert >=5.5
-        - nbformat
-        - sphinx >=7
-    test:
-      imports:
-        - jupyter_sphinx
+      noarch: generic
+      run: 
+        - {{ pin_subpackage('jupyter-sphinx', max_pin="x.x.x") }}
+      test:
+        imports:
+          - jupyter_sphinx
 
 about:
   home: https://github.com/jupyter/jupyter-sphinx/
