@@ -12,12 +12,12 @@ source:
 
 build:
   number: 3
-  noarch: python
 
 outputs:
   - name: {{ name }}
     build:
       script: python -m pip install . -vv
+      noarch: python
     requirements:
       host:
         - pip
@@ -37,6 +37,8 @@ outputs:
 
   # alias to deprecate the jupyter_sphinx feedstock
   - name: jupyter_sphinx
+    build:
+      noarch: python
     requirements:
       run:
         - {{ pin_subpackage(name, exact=True) }}
