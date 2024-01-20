@@ -15,11 +15,44 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10485&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyter-sphinx-feedstock?branchName=main">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10485&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyter-sphinx-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10485&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyter-sphinx-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10485&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyter-sphinx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10485&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyter-sphinx-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -30,6 +63,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupyter--sphinx-green.svg)](https://anaconda.org/conda-forge/jupyter-sphinx) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyter-sphinx.svg)](https://anaconda.org/conda-forge/jupyter-sphinx) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter-sphinx.svg)](https://anaconda.org/conda-forge/jupyter-sphinx) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyter-sphinx.svg)](https://anaconda.org/conda-forge/jupyter-sphinx) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupyter_sphinx-green.svg)](https://anaconda.org/conda-forge/jupyter_sphinx) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyter_sphinx.svg)](https://anaconda.org/conda-forge/jupyter_sphinx) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter_sphinx.svg)](https://anaconda.org/conda-forge/jupyter_sphinx) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyter_sphinx.svg)](https://anaconda.org/conda-forge/jupyter_sphinx) |
 
 Installing jupyter-sphinx
 =========================
@@ -41,16 +75,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyter-sphinx` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `jupyter-sphinx, jupyter_sphinx` can be installed with `conda`:
 
 ```
-conda install jupyter-sphinx
+conda install jupyter-sphinx jupyter_sphinx
 ```
 
 or with `mamba`:
 
 ```
-mamba install jupyter-sphinx
+mamba install jupyter-sphinx jupyter_sphinx
 ```
 
 It is possible to list all of the versions of `jupyter-sphinx` available on your platform with `conda`:
