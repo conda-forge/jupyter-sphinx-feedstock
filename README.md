@@ -30,6 +30,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupyter--sphinx-green.svg)](https://anaconda.org/conda-forge/jupyter-sphinx) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyter-sphinx.svg)](https://anaconda.org/conda-forge/jupyter-sphinx) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter-sphinx.svg)](https://anaconda.org/conda-forge/jupyter-sphinx) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyter-sphinx.svg)](https://anaconda.org/conda-forge/jupyter-sphinx) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupyter_sphinx-green.svg)](https://anaconda.org/conda-forge/jupyter_sphinx) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyter_sphinx.svg)](https://anaconda.org/conda-forge/jupyter_sphinx) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter_sphinx.svg)](https://anaconda.org/conda-forge/jupyter_sphinx) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyter_sphinx.svg)](https://anaconda.org/conda-forge/jupyter_sphinx) |
 
 Installing jupyter-sphinx
 =========================
@@ -41,16 +42,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyter-sphinx` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `jupyter-sphinx, jupyter_sphinx` can be installed with `conda`:
 
 ```
-conda install jupyter-sphinx
+conda install jupyter-sphinx jupyter_sphinx
 ```
 
 or with `mamba`:
 
 ```
-mamba install jupyter-sphinx
+mamba install jupyter-sphinx jupyter_sphinx
 ```
 
 It is possible to list all of the versions of `jupyter-sphinx` available on your platform with `conda`:
