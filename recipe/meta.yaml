@@ -1,4 +1,4 @@
-{% set name = "jupyter-sphinx-common" %}
+{% set name = "jupyter-sphinx" %}
 {% set package = "jupyter_sphinx" %}
 {% set version = "0.5.3" %}
 
@@ -7,16 +7,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyter-sphinx/{{ package }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ package }}-{{ version }}.tar.gz
   sha256: 2e23699a3a1cf5db31b10981da5aa32606ee730f6b73a844d1e76d800756af56
 
 build:
   number: 2
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
 
 outputs:
-  - name: jupyter-sphinx
+  - name: {{ name }}
+    build:
+      script: python -m pip install . -vv
     requirements:
       host:
         - pip
@@ -36,12 +37,12 @@ outputs:
 
   # alias to deprecate the jupyter_sphinx feedstock
   - name: jupyter_sphinx
-      noarch: generic
-      run: 
+    requirements:
+      run:
         - {{ pin_subpackage('jupyter-sphinx', max_pin="x.x.x") }}
-      test:
-        imports:
-          - jupyter_sphinx
+    test:
+      imports:
+        - jupyter_sphinx
 
 about:
   home: https://github.com/jupyter/jupyter-sphinx/
