@@ -38,7 +38,7 @@ outputs:
           imports:
             - jupyter_sphinx
           python_version:
-            - ['${{ python_min }}.*']
+            - ${{ python_min }}.*
             - "*"
 
   # alias to deprecate the jupyter_sphinx feedstock
@@ -54,7 +54,7 @@ outputs:
           imports:
             - jupyter_sphinx
           python_version:
-            - ['${{ python_min }}.*']
+            - ${{ python_min }}.*
             - "*"
 
 about:
